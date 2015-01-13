@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+  android:background="@drawable/viewflow_bg"
+  >
+
+    <FrameLayout
+        android:layout_width="368dp"
+        android:layout_height="291dp"
+        android:visibility="visible" 
+  >
+
+        <ImageView
+            android:id="@+id/set"
+            android:layout_marginTop="-3dp"
+            android:layout_marginLeft="4dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+          />
+
+        <RelativeLayout
+            
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <cn.flyaudio.weather.view.MarqueeTextView
+                android:id="@+id/weathercity"
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/whiteColor"
+                android:textSize="32sp" />
+
+            <cn.flyaudio.weather.view.MarqueeTextView
+                android:id="@+id/weathercity_pinyin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weathercity"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="0dp"
+                android:textColor="@color/whiteColor"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weathercity_pinyin"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/whiteColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/whiteColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/datafrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="230dp"
+                android:textColor="@color/whiteColor"
+                android:textSize="15sp" />
+
+          
+   
+
+            <TextView
+                android:id="@+id/weatherdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/datafrom"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="5dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:textColor="@color/whiteColor"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/curTemp_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/weathercity"
+                android:layout_marginLeft="210dip"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:visibility="invisible" >
+
+                <TextView
+                    android:id="@+id/curTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="72sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/weather_unit_big_temp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/city_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/weather_style" />
+
+            <TextView
+                android:id="@+id/weathernum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/curTemp_parent"
+                android:layout_below="@id/curTemp_parent"
+                android:layout_marginTop="-12dp"
+                android:textColor="@color/whiteColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/weather_lowhigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/curTemp_parent"
+                android:layout_below="@id/weathernum"
+                android:drawableRight="@drawable/weather_unit_small_temp"
+                android:textColor="@color/whiteColor"
+                android:textSize="22sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/commonweather"
+        android:layout_width="368dp"
+        android:layout_height="294dp"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/fautureweather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <cn.flyaudio.weather.view.ListItemView
+                android:id="@+id/weather1"
+                android:layout_width="@dimen/listitemview_layout_width"
+                android:layout_height="90dp"
+                android:layout_marginLeft="@dimen/listitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/listitemview_layout_margintop" />
+
+            <View
+                android:layout_width="473px"
+                android:layout_height="3px"
+              
+                android:background="@drawable/listitem_divide" />
+
+            <cn.flyaudio.weather.view.ListItemView
+                android:id="@+id/weather2"
+                android:layout_width="@dimen/listitemview_layout_width"
+                android:layout_height="90dp"
+                android:layout_marginLeft="@dimen/listitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/listitemview_layout_margintop" />
+
+            <View
+                android:layout_width="473px"
+                android:layout_height="3px"
+              
+                android:background="@drawable/listitem_divide" />
+
+            <cn.flyaudio.weather.view.ListItemView
+                android:id="@+id/weather3"
+                android:layout_width="@dimen/listitemview_layout_width"
+                android:layout_height="90dp"
+                android:layout_marginLeft="@dimen/listitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/listitemview_layout_margintop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moretodaydetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <cn.flyaudio.weather.view.MoreDetailListItemView
+                android:id="@+id/detail2"
+                android:layout_width="@dimen/moredetaillistitemview_layout_width"
+                android:layout_height="@dimen/listitemview_layout_height"
+                android:layout_marginLeft="@dimen/moredetaillistitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/moredetaillistitemview_layout_margintop" />
+
+            <cn.flyaudio.weather.view.MoreDetailListItemView
+                android:id="@+id/detail3"
+                android:layout_width="@dimen/moredetaillistitemview_layout_width"
+                android:layout_height="@dimen/listitemview_layout_height"
+                android:layout_marginLeft="@dimen/moredetaillistitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/moredetaillistitemview_layout_margintop" />
+
+            <cn.flyaudio.weather.view.MoreDetailListItemView
+                android:id="@+id/detail4"
+                android:layout_width="@dimen/moredetaillistitemview_layout_width"
+                android:layout_height="@dimen/listitemview_layout_height"
+                android:layout_marginLeft="@dimen/moredetaillistitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/moredetaillistitemview_layout_margintop" />
+
+            <cn.flyaudio.weather.view.MoreDetailListItemView
+                android:id="@+id/detail5"
+                android:layout_width="@dimen/moredetaillistitemview_layout_width"
+                android:layout_height="@dimen/listitemview_layout_height"
+                android:layout_marginLeft="@dimen/moredetaillistitemview_layout_marginleft"
+                android:layout_marginTop="@dimen/moredetaillistitemview_layout_margintop" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

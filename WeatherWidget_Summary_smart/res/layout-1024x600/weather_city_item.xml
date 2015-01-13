@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp"
+    android:layout_gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/gvcityname"
+        android:layout_width="788px"
+        android:layout_height="84px"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/weather_select_button_style"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:paddingLeft="35dp"
+        android:text="@string/guangzhou"
+        android:textColor="@drawable/weather_color"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="158px"
+        android:layout_height="84px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/weather_delete_style"
+        android:text="@string/deletecity"
+        android:textColor="@drawable/weather_color"
+        android:textSize="20sp" />
+
+</RelativeLayout>

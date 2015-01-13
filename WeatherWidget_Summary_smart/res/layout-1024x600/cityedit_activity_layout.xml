@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cityeditpagebg_color"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/weather_all_bg"
+    android:orientation="vertical" >
+
+    <!-- android:background="@drawable/weather_all_bg" -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-4px"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weather_tip_blue_bg" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/details_activity_back"
+            android:paddingTop="22dp"
+            android:text="@string/back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/backbutton"
+            android:layout_toLeftOf="@+id/backbutton"
+            android:background="@drawable/weather_add_city_style"
+            android:paddingTop="22dp"
+            android:text="@string/button_add_city"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="9dp"
+            android:text="@string/choose_city"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="35px"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth" >
+    </GridView>
+
+</LinearLayout>

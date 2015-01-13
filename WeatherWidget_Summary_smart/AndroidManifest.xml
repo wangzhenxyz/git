@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.flyaudio.Weather" >
+
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+
+    <uses-sdk android:targetSdkVersion="15" android:minSdkVersion="15"/>
+
+    <application
+        android:name="cn.flyaudio.weather.data.YahooWeatherApplication"
+        android:icon="@drawable/weather_widget_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <uses-library android:name="android.test.runner" />
+
+        <receiver
+            android:name="cn.flyaudio.Weather.WeatherWidget"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_widget" />
+
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            
+             <intent-filter>
+                <action android:name="action.flyaudio.colortheme" />
+            </intent-filter>
+            
+          <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+            
+        </receiver>
+
+        
+        <activity
+            android:name="cn.flyaudio.weather.activity.CityEditPageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar" />
+           <activity
+            android:name="cn.flyaudio.weather.activity.AddCityActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+        <activity
+            android:name="cn.flyaudio.weather.activity.WeatherDetailsActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:icon="@drawable/weather_widget_icon"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+        <service android:name="cn.flyaudio.weather.service.YahooService" >
+        </service>
+    </application>
+
+</manifest>

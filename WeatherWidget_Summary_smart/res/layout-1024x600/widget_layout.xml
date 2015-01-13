@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weatherwidgetcolorbg"
+    android:layout_width="320px"
+    android:layout_height="176px"
+    android:layout_marginBottom="20dp"
+    android:layout_marginRight="0dp"
+    android:clickable="true" >
+
+    <ImageView
+        android:id="@+id/weatherwidget"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/weather_widget_default_bg"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/curt_temp_text"
+        android:layout_width="100px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200px"
+        android:layout_marginTop="40px"
+        android:clickable="false"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="30sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/city_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="130px"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+</FrameLayout>
