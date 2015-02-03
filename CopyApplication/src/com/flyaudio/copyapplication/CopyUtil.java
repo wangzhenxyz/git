@@ -141,6 +141,10 @@ public class CopyUtil {
 			m4.what = 0x003;
 			m4.sendToTarget();
 
+		} else {
+			Message m4 = handler.obtainMessage();
+			m4.what = 0x005;
+			m4.sendToTarget();
 		}
 
 		Flog.d(TAG, "copyFolder---end");
