@@ -87,9 +87,9 @@ public class CopyActivity extends Activity implements OnClickListener {
 	private TextView mContent4;
 	private Button mStop4;
 
-	private CustomerDialog newDialog5;
+/*	private CustomerDialog newDialog5;
 	private Button mGoto5;
-	private TextView mContent5;
+	private TextView mContent5;*/
 
 	private LayoutInflater inflater;
 	private RelativeLayout layout1;
@@ -105,7 +105,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		Flog.d(TAG, "onCreate");
 		setContentView(R.layout.copy_layout);
-		CopyUtil.readDiskCard();
+	//	CopyUtil.readDiskCard();
 		mBroadcastSD = new BroadcastSD();
 		// 在IntentFilter中选择你要监听的行为
 		IntentFilter mFilter = new IntentFilter(Intent.ACTION_MEDIA_MOUNTED);// sd卡被插入，且已经挂载
@@ -137,7 +137,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 		mCancel.setOnClickListener(this);
 		mHidden.setOnClickListener(this);
 		inflater = LayoutInflater.from(this);
-		if ((double) CopyUtil.mAvialable / 1024 / 1024 / 1024 < 10) {
+/*		if ((double) CopyUtil.mAvialable / 1024 / 1024 / 1024 < 10) {
 			View mGoTipView5 = inflater.inflate(R.layout.tip_dialog, null);
 			newDialog5 = new CustomerDialog(CopyActivity.this, R.style.Dialog,
 					StringUtil.mTipAviable, StringUtil.mCopyDialogOk, null,
@@ -151,7 +151,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 
 			newDialog5.show();
 			dialogStyle(newDialog5);
-		} else {
+		} else {*/
 			// newDialog5.dismiss();
 			View mGoTipView = inflater.inflate(
 					R.layout.double_btn_dialog_layout, null);
@@ -167,7 +167,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 			mStop.setOnClickListener(this);
 			newDialog.show();
 			dialogStyle(newDialog);
-		}
+	//	}
 
 		Flog.d(TAG, "onCreate---end");
 
@@ -598,7 +598,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 			finish();
 
 			break;
-		case R.id.go5:
+	/*	case R.id.go5:
 			newDialog5.dismiss();
 			View mGoTipView = inflater.inflate(
 					R.layout.double_btn_dialog_layout, null);
@@ -615,7 +615,7 @@ public class CopyActivity extends Activity implements OnClickListener {
 			newDialog.show();
 			dialogStyle(newDialog);
 
-			break;
+			break;*/
 
 		default:
 			break;
