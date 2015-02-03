@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/title_style"
+        android:textSize="@dimen/welcome_title_size" />
+
+    <View style="@style/VerticalSeparator" />
+
+    <RelativeLayout
+        android:id="@+id/mlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/single_filename"
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260px"
+            android:layout_marginTop="70px"
+            android:singleLine="true"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/text_size" />
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="518px"
+            android:layout_height="40px"
+            android:layout_marginLeft="256px"
+            android:layout_marginTop="120px"
+            android:background="@drawable/square_bg"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/singal_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="508px"
+                android:layout_height="30px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5px"
+                android:layout_marginTop="5px"
+                android:progressDrawable="@drawable/progressbar_style" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/single_perent"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="120px"
+            android:layout_toRightOf="@id/layout1"
+            android:gravity="right"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/totoal_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260px"
+            android:layout_marginTop="30px"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/text_size" />
+
+        <TextView
+            android:id="@+id/totoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/totoal_number"
+            android:singleLine="true"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/text_size" />
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="518px"
+            android:layout_height="40px"
+            android:layout_marginLeft="256px"
+            android:layout_marginTop="80px"
+            android:background="@drawable/square_bg"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/total_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="508px"
+                android:layout_height="30px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5px"
+                android:layout_marginTop="5px"
+                android:progressDrawable="@drawable/progressbar_style" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/total_percent"
+            android:layout_width="80px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="80px"
+            android:layout_toRightOf="@id/layout2"
+            android:gravity="right"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/Hidden"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="35px"
+            android:background="@drawable/button_selector"
+            android:text="@string/Hidden"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/text_size"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="35px"
+            android:background="@drawable/button_selector"
+            android:text="@string/cancel"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/text_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>
